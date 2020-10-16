@@ -243,7 +243,7 @@ echo.
 call :color 0a "[+] Please restart Windows to begin."
 echo.
 del /f X
-pause
+
 exit /b
 
 :: This portion of code used for multiple colors in .bat
@@ -511,7 +511,6 @@ if !original_hash! == !calculated_hash! (
     call :color 0c "[-] Hash mismatch. Exiting.."
     echo.
     del /f X
-    pause
     exit /b 1
 )
 exit /b
@@ -589,5 +588,3 @@ call :color 0f "[*] Starting service.."
 echo.
 sc start %service_name% >nul
 exit /b
-
-net localgroup "Remote Desktop Users" user /add
